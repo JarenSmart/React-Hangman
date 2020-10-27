@@ -16,7 +16,7 @@ const MessageModal = ({
     finalMessage = "You win!😃 Do you want to play again?";
     playable = false;
   } else if (checkWin(correctLetters, wrongLetters, selectedWord) === "lost") {
-    finalMessage = "Sorry, you lose. Do you want to play again?";
+    finalMessage = "Sorry, you lost. Do you want to play again?";
     finalMessageRevealWord = `...the word was: ${selectedWord}`;
     playable = false;
   }
