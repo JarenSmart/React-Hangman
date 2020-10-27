@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { showNotification as show } from "./helpers/helpers";
 import Header from "./components/Header";
 import Hangman from "./components/Hangman";
 import WrongLetters from "./components/WrongLetters";
@@ -14,6 +15,7 @@ function App() {
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const handleKeydown = (e) => {
@@ -25,13 +27,13 @@ function App() {
           if (!correctLetters.includes(letter)) {
             setCorrectLetters((currentLetters) => [...currentLetters, letter]);
           } else {
-            // somethingElseHere
+            show(setShowNotification);
           }
         } else {
           if (!wrongLetters.includes(letter)) {
             setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
           } else {
-            // somethingElseHere
+            show(setShowNotification);
           }
         }
       }
@@ -45,10 +47,12 @@ function App() {
     <div>
       <Header />
       <div className="main-game">
-        <Hangman />
+        <Hangman wrongLetters={wrongLetters} />
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
+      <MessageModal />
+      <Notification showNotification={showNotification} />
     </div>
   );
 }

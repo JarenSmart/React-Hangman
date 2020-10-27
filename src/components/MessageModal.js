@@ -4,9 +4,9 @@ const MessageModal = () => {
   return (
     <div className="modal-container" id="modal-container">
       <div className="modal">
-        <h2 id="final-message"></h2>
-        <h3 id="final-message-reveal-word"></h3>
-        <button id="play-button">Play Again</button>
+        <h2></h2>
+        <h3></h3>
+        <button>Play Again</button>
       </div>
     </div>
   );
