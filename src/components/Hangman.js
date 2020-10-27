@@ -1,6 +1,6 @@
 import React from "react";
 
-function Hangman() {
+const Hangman = () => {
   return (
     <svg height="250" width="200" class="figure-container">
       {/* The Gallows */}
@@ -21,6 +21,6 @@ function Hangman() {
       <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
     </svg>
   );
-}
+};
 
 export default Hangman;
