@@ -26,15 +26,11 @@ h1 {
   width: 450px;
 }
 
-.figure-container {
+.hangman-container {
   fill: transparent;
   stroke: #fff;
   stroke-width: 4px;
   stroke-linecap: round;
-}
-
-.figure-part {
-  display: none;
 }
 
 .wrong-letters-container {
@@ -73,7 +69,7 @@ h1 {
   width: 20px;
 }
 
-.popup-container {
+.modal-container {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -86,7 +82,7 @@ h1 {
   justify-content: center;
 }
 
-.popup {
+.modal {
   background: #2980b9;
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
@@ -94,7 +90,7 @@ h1 {
   text-align: center;
 }
 
-.popup button {
+.modal button {
   cursor: pointer;
   background-color: #fff;
   color: #2980b9;
@@ -104,11 +100,11 @@ h1 {
   font-size: 16px;
 }
 
-.popup button:active {
+.modal button:active {
   transform: scale(0.98);
 }
 
-.popup button:focus {
+.modal button:focus {
   outline: 0;
 }
 

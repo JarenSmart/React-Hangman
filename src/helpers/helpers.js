@@ -5,3 +5,19 @@ export function showNotification(setter) {
   }, 2000);
   // show popup for 2 seconds
 }
+
+export function checkWin(correct, wrong, word) {
+  let status = "win";
+
+  //check for win
+  word.split("").forEach((letter) => {
+    if (!correct.includes(letter)) {
+      status = "";
+    }
+  });
+
+  //check for loss
+  if (wrong.length === 6) status = "lost";
+
+  return status;
+}
